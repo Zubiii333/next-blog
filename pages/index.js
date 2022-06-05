@@ -9,30 +9,25 @@ export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Jubaeir</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
+        <p>Hi I am A.K.M Jubaeir Islam. I'm 21 and currently studying Computer Science in an University. Below I have shared some of my Projects</p>
         <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          {' '}
+          I have built this website using NextJs. Thanks to their amazing 
+          <a href="https://nextjs.org/learn"> Next.js tutorial</a>.
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
+        <h2 className={utilStyles.headingLg}>Projects</h2> 
+              <Link href='https://github.com/Zubiii333/DiceRoller'>
+                <a>Dice Roller App using Kotlin</a>
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
+              <Link href= 'https://github.com/Zubiii333/next-blog'>
+                <a> My personal blog </a>
+              </Link>
       </section>
     </Layout>
   )
